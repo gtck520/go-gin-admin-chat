@@ -25,17 +25,17 @@
 		<scroll-view scroll-y class="indexes"   :scroll-into-view="'indexes-'+ listCurID" :style="[{height:'calc(100vh - '+ CustomBar + 'px - 50px)'}]"
 		 :scroll-with-animation="true" :enable-back-to-top="true">
 			<block v-for="(item,index) in list" :key="index">
-				<view :class="'indexItem-' + item.firstchrater" :id="'indexes-' + item.firstchrater" :data-index="item.firstchrater" >
-					<view class="padding">{{item.firstchrater}}</view>
+				<view :class="'indexItem-' + item.group_id" :id="'indexes-' + item.group_id" :data-index="item.group_id" >
+					<view class="padding">{{item.group_name}}</view>
 					<view class="cu-list menu-avatar no-padding">
-						<view class="cu-item" v-for="(items,sub) in item.list" :key="sub" @click="clicktochat(index,sub)" >
+						<view class="cu-item" v-for="(items,sub) in item.group_members" :key="sub" @click="clicktochat(index,sub)" >
 							<view class="cu-avatar round lg">
-								<image :src="items.avatar" mode="aspectFit" class="cu-avatar round lg " :class="items.status=='offline'?'grayscale':''"></image>
+								<image :src="items.id" mode="aspectFit" class="cu-avatar round lg " :class="items.status=='offline'?'grayscale':''"></image>
 							</view>
 							<view class="content">
-								<view class="text-grey"><text class="text-abc">{{items.username}}</text>君</view>
+								<view class="text-grey"><text class="text-abc">{{items.id}}</text>君</view>
 								<view class="text-gray text-sm">
-									{{items.sign}}
+									{{items.id}}
 								</view>
 							</view>
 						</view>
@@ -163,15 +163,19 @@
 			clicktochat(index,sub){
 				///
 				let that=this;
-				let mineid=this.userInfo.data.mine.id;
-				let toid=this.list[index]['list'][sub]['id'];
+				let mineid=this.userInfo.userinfo.id;
+				console.log(this.list)
+				let toid=this.list[index]['group_members'][sub]['friend_id'];
+				if(toid==mineid){
+					toid =this.list[index]['group_members'][sub]['user_id'];
+				}
 				let chattoinfo=new Object();
-				chattoinfo=this.list[index]['list'][sub];
+				chattoinfo=this.list[index]['group_members'][sub];
                  console.log(chattoinfo)
 				
 				this.$store.commit('addChater',{data:chattoinfo,type:'user',val:toid});
 		          uni.navigateTo({
-					url:"../chat/chat?chatto="+toid+'&title='+chattoinfo.username
+					url:"../chat/chat?chatto="+toid+'&title='+chattoinfo.id
 				})
 			},
 			gotoadduser(){

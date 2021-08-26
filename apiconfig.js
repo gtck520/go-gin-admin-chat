@@ -12,7 +12,7 @@ class apiconfig {
 			checklogout:"apicom/user/checklogout", ///第三方注册,
 			registClientid:"/apicom/chat/registchater",///注册聊天通道,
 			initInfo:"api/user/info",///获取用户个人信息  [usign=34],
-			sendMessage:'apicom/commapi/sendmessageapp',///发送数据
+			sendMessage:'api/ws/send',///发送数据
 		    getMessagelog:'apicom/chatlog/mochatlog',///获取历史记录,
 		    upload_image:this.baseurl+'/apicom/commapi/upload_image',///图片上传地址,
 			upload_voice:this.baseurl+'/apicom/commapi/upload_voice',///图片上传地址,

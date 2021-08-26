@@ -54,13 +54,13 @@ const store = new Vuex.Store({
 		addChater(state,provider){
 			let nowDate=new Date();
 		    if(provider.type=="user"){
-				 state.chatTolist['user'+provider.val]=provider.data;
-				 state.chatTolist['user'+provider.val]['weidu']=0
-				 state.chatTolist['user'+provider.val]['lasttime']=nowDate.getHours()+":"+nowDate.getMinutes();
+				 state.chatTolist['user'+provider.val]=provider.friends;
+				 //state.chatTolist['user'+provider.val]['weidu']=0
+				 //state.chatTolist['user'+provider.val]['lasttime']=nowDate.getHours()+":"+nowDate.getMinutes();
 			}else{
 				 state.chatTolist['group'+provider.val]=provider.data;
-				 state.chatTolist['group'+provider.val]['weidu']=0
-				 state.chatTolist['group'+provider.val]['lasttime']=nowDate.getHours()+":"+nowDate.getMinutes();
+				 //state.chatTolist['group'+provider.val]['weidu']=0
+				 //state.chatTolist['group'+provider.val]['lasttime']=nowDate.getHours()+":"+nowDate.getMinutes();
 			}
 	
 		},
@@ -97,11 +97,11 @@ const store = new Vuex.Store({
 		   if(provider.type=="user"){
 			
 			   if(typeof(state.chatTolist['user'+provider.val])=='undefined'){
-				  this.commit('addChater',{data:provider.addinfo,type:'user',val:provider.addinfo.id})
+				 // this.commit('addChater',{data:provider.addinfo,type:'user',val:provider.addinfo.id})
 		       }
-			   state.chatTolist['user'+provider.val][provider.attr]=provider.data;
-			   state.chatTolist['user'+provider.val]['weidu']++;
-			   state.chatTolist['user'+provider.val]['lasttime']=nowDate.getHours()+":"+nowDate.getMinutes();
+			   //state.chatTolist['user'+provider.val][provider.attr]=provider.data;
+			   //state.chatTolist['user'+provider.val]['weidu']++;
+			  // state.chatTolist['user'+provider.val]['lasttime']=nowDate.getHours()+":"+nowDate.getMinutes();
 		
          }else{
 			 if(typeof(state.chatTolist['group'+provider.val])=='undefined'){
