@@ -1,0 +1,197 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
+		{
+			"path": "pages/infos/infos",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"app-plus":{
+					// 将回弹属性关掉
+					"bounce":"none",
+					"titleNView":false
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/index/login",
+            "style" : {
+				"app-plus":{
+					// 将回弹属性关掉
+					"bounce":"none",
+					"titleNView":false
+				}
+			}
+        }
+		,{
+		    "path" : "pages/index/regist",
+		    "style" : {
+				"app-plus":{
+					// 将回弹属性关掉
+					"bounce":"none",
+					"titleNView":false
+				}
+			}
+		},
+		{
+		    "path" : "pages/userlist/userlist",
+		    "style" : {
+		    	"app-plus":{
+		    		// 将回弹属性关掉
+		    		"bounce":"none",
+		    		"titleNView":false
+		    	}
+		    }
+		},
+       {
+           "path" : "pages/userlist/adduser",
+           "style" : {
+           	"app-plus":{
+           		// 将回弹属性关掉
+           		"bounce":"none",
+           		"titleNView":false
+           	}
+           }
+       }, {
+           "path" : "pages/userlist/applydetail",
+           "style" : {
+           	"app-plus":{
+           		// 将回弹属性关掉
+           		"bounce":"none",
+           		"titleNView":false
+           	}
+           }
+       }
+     
+        ,{
+            "path" : "pages/groups/groups",
+           "style" : {
+           	"app-plus":{
+           		// 将回弹属性关掉
+           		"bounce":"none",
+           		"titleNView":false
+           	}
+           }
+        }
+        ,{
+            "path" : "pages/user/usercenter",
+           "style" : {
+           	"app-plus":{
+           		// 将回弹属性关掉
+           		"bounce":"none",
+           		"titleNView":false
+           	}
+           }
+        }
+        ,{
+            "path" : "pages/chat/chat",
+            "style" : {
+				
+				"app-plus":{
+					// 将回弹属性关掉
+					"bounce":"none",
+					"titleNView":false
+				}
+			}
+        }
+        ,{
+            "path" : "pages/login",
+            "style" : {
+			
+            	"app-plus":{
+            		// 将回弹属性关掉
+            		"bounce":"none",
+            		"titleNView":false
+            	}
+            }
+        }
+        ,{
+            "path" : "pages/regist",
+            "style" : {
+					"navigationBarTitleText": "用户注册"
+			}
+        }
+        ,{
+            "path" : "pages/user/userinfo",
+            "style" : {
+				"app-plus":{
+					// 将回弹属性关掉
+					"bounce":"none",
+					"titleNView":false
+				}
+			}
+        }
+        ,{
+            "path" : "pages/msgbox/msgbox",
+           "style" : {
+           	"app-plus":{
+           		// 将回弹属性关掉
+           		"bounce":"none",
+           		"titleNView":false
+           	}
+           }
+        }
+        ,{
+            "path" : "pages/groups/addgroup",
+            "style" : {
+            	"app-plus":{
+            		// 将回弹属性关掉
+            		"bounce":"none",
+            		"titleNView":false
+            	}
+            }
+        }
+        ,{
+            "path" : "pages/groups/joingroup",
+            "style" : {
+          	 "app-plus":{
+          		// 将回弹属性关掉
+          		"bounce":"none",
+          		"titleNView":false
+          	}
+          }
+        }
+        ,{
+            "path" : "pages/user/update",
+           "style" : {
+           	 "app-plus":{
+           		// 将回弹属性关掉
+           		"bounce":"none",
+           		"titleNView":false
+           	}
+           }
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+	    "color": "#666",
+	    "selectedColor": "#666",
+	    "borderStyle": "black",
+	    "backgroundColor": "#ffffff",
+	    "list": [{
+	        "pagePath": "pages/infos/infos",
+	        "iconPath": "static/icon/xiaoxi.png",
+	        "selectedIconPath": "static/icon/xiaoxi1.png",
+	        "text": "消息"
+	    }, {
+	        "pagePath": "pages/userlist/userlist",
+	        "iconPath": "static/icon/haoyou.png",
+	        "selectedIconPath": "static/icon/haoyou1.png",
+	        "text": "好友"
+	    },{
+	        "pagePath": "pages/groups/groups",
+	        "iconPath": "static/icon/qun.png",
+	        "selectedIconPath": "static/icon/qun1.png",
+	        "text": "群聊"
+	    },{
+	        "pagePath": "pages/user/usercenter",
+	        "iconPath": "static/icon/grzx.png",
+	        "selectedIconPath": "static/icon/grzx1.png",
+	        "text": "个人中心"
+	    }]
+	}
+}
